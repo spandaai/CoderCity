@@ -1,3 +1,4 @@
+# need python? 
 FROM node:12-alpine as builder
 
 ENV NODE_ENV build
@@ -10,7 +11,7 @@ COPY ./src/ /home/node/src
 
 USER root
 # Dependencies for nodegit (python)
-RUN apk add --no-cache make gcc g++ python krb5-dev
+RUN apk add --no-cache make gcc g++ python3 krb5-dev
 RUN npm ci && npm run build
 
 # ---

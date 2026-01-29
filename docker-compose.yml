@@ -9,7 +9,7 @@ services:
     environment:
       GIT_PROJECTS_FOLDER: /projects
     volumes:
-      - "/Users/yikaiyang/Projects/Uni:/projects"
+      - "./projects1:/projects"
   cc_frontend:
     build:
       context: ./frontend
